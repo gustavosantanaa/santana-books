@@ -57,12 +57,12 @@ function Pesquisa() {
                     setLivrosPesquisados(resultadoPesquisa)
                 }}
             />
-            { livrosPesquisados.map( livro => (
-                <Resultado>
-                    <img src={livro.src}/>
-                    <p>{livro.nome}</p>
-                </Resultado>
-            )) }
+           {livrosPesquisados.map((livro, index) => (
+    <Resultado key={index}>
+        <img src={livro.src} alt={livro.nome} />
+        <p>{livro.nome}</p>
+    </Resultado>
+))}
         </PesquisaContainer>
     )
 }
